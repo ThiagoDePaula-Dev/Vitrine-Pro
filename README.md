@@ -1,4 +1,4 @@
-# Achei Pro — landing pages + diretório de profissionais
+# Vitrine Pro — landing pages + diretório de profissionais
 
 Plataforma em que **um admin** gera landing pages de profissionais (personal, psicólogo, barbeiro…) a partir de briefing + fotos com IA, ajusta num editor com preview e publica em `/[slug]`. O site público tem busca por categoria/cidade, avaliações moderadas e contato por WhatsApp.
 
@@ -51,7 +51,7 @@ src/lib/landing       schema Zod, temas, checklist, slug, persistência
 src/lib/ai            prompts, schema da saída da IA, composição
 src/components        landing/ (público), editor/, briefing/, directory/, admin/
 src/app               / /busca /categorias /[slug] · /admin/* · /api/ai/*
-config: src/config/site.ts (nome da marca; sugestões: Achei Pro, Pro Perto, Vitrine Local)
+config: src/config/site.ts (nome da marca: "Vitrine Pro")
 ```
 
 ## Regras de produto (não negociáveis)

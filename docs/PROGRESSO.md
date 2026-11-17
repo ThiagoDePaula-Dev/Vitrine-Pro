@@ -22,7 +22,7 @@ Público: `/` (busca + categorias), `/busca` (filtros na URL, ordenação, pagin
 
 ## Fase 6 — concluída (sem teste em Supabase real; Lighthouse não medido)
 Admin: shell com tema claro/escuro e Ctrl+K (`AdminShell`), visão geral (publicadas, rascunhos, views, cliques WhatsApp/checkout em 30 dias, avaliações pendentes), `/admin/paginas` (busca + filtros), `/admin/categorias` (CRUD), moderação de avaliações. `Tracker` grava `events` na landing (view 1x/sessão + cliques `data-track`). QR Code com download PNG.
-SEO: metadata/canonical/OG dinâmicos + `opengraph-image`, `sitemap.xml`, `robots.txt`, JSON-LD (`aggregateRating` só com aprovadas), imagem do hero com prioridade. Marca "Achei Pro" em `src/config/site.ts` + logo SVG.
+SEO: metadata/canonical/OG dinâmicos + `opengraph-image`, `sitemap.xml`, `robots.txt`, JSON-LD (`aggregateRating` só com aprovadas), imagem do hero com prioridade. Marca "Vitrine Pro" (antes "Achei Pro") em `src/config/site.ts` + logo SVG.
 Testes (Vitest, 45 passando): schema da IA/compose, slug, economia dos planos, checklist, JSON-LD; RLS em `tests/rls.test.ts` (integração, pulado sem `RLS_*`). README criado.
 
 Migration `005_reviews_hide_ip_hash.sql` (revisão pós-Fase 6): anon não lê mais `reviews.ip_hash`.
