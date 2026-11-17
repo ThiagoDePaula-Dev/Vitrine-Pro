@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter);
+}
+
+body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Variações visuais por template da landing (cores vêm das variáveis --lp-*) */
+.lp[data-template="dark"] .lp-hero {
+  background: radial-gradient(ellipse at top right, color-mix(in srgb, var(--lp-primary) 30%, transparent), transparent 60%);
+}
+.lp[data-template="dark"] .lp-cta {
+  background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--lp-primary) 14%, transparent));
+}
+.lp[data-template="light"] .lp-hero {
+  background: linear-gradient(180deg, var(--lp-card), var(--lp-bg));
+}
+.lp[data-template="light"] .lp-cta {
+  background: var(--lp-card);
+}
+.lp[data-template="vibrant"] .lp-hero {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--lp-primary) 22%, transparent), color-mix(in srgb, var(--lp-accent) 28%, transparent));
+}
+.lp[data-template="vibrant"] .lp-cta {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--lp-accent) 30%, transparent), color-mix(in srgb, var(--lp-primary) 22%, transparent));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Tema claro do admin: reatribui as variáveis de cor do Tailwind (as classes dark do admin viram claras). */
+.admin-light {
+  color-scheme: light;
+  --color-white: #18181b;
+  --color-black: #ffffff;
+  --color-neutral-950: #f4f4f5;
+  --color-neutral-900: #ffffff;
+  --color-neutral-800: #e4e4e7;
+  --color-neutral-500: #71717a;
+  --color-neutral-400: #52525b;
+  --color-neutral-300: #3f3f46;
+  --color-neutral-100: #18181b;
+}
